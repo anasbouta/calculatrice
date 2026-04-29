@@ -3,8 +3,8 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "microcalc"
-version = "0.1.0"
+name = "Mathlight"
+version = "0.1.4"
 description = "Une calculatrice atomique ultra-légère"
 authors = [{name = "Anas Boutaghroucht", email = "anas.boutaghroucht000@gmail.com"}]
 dependencies = [] # Zéro dépendance, c'est du pur Python !
