@@ -1,4 +1,4 @@
-name: Publish Microcalc
+name: "Mathlight"
 
 on:
   push:
