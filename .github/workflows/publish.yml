@@ -3,23 +3,29 @@ name: Publish Microcalc
 on:
   push:
     tags:
-      - 'v*' # Se déclenche quand tu crées une version (ex: v0.1.0)
+      - 'v*'
 
 jobs:
   build-n-publish:
     runs-on: ubuntu-latest
+    # Cette section permet à GitHub de s'authentifier de manière moderne auprès de PyPI
+    permissions:
+      id-token: write  
+      contents: read
+
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4 # Version mise à jour pour 2026
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5 # Version mise à jour pour 2026
         with:
-          python-version: '3.x'
+          python-version: '3.11'
+          
       - name: Install dependencies
         run: pip install build twine
-      - name: Build and publish
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-        run: |
-          python -m build
-          python -m twine upload dist/*
+
+      - name: Build package
+        run: python -m build
+
+      - name: Publish to PyPI
+        # Utilise l'action officielle de PyPI pour plus de sécurité
+        uses: pypa/gh-action-pypi-publish@release/v1
