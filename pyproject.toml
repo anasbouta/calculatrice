@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Mathlight"
-version = "0.2.0"
+version = "0.2.1"
 description = "Une calculatrice atomique ultra-légère"
 authors = [{name = "Anas Boutaghroucht", email = "anas.boutaghroucht000@gmail.com"}]
 dependencies = [] # Zéro dépendance, c'est du pur Python !
