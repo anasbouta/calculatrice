@@ -1,7 +1,7 @@
 
 ---
 
-# 🧮 Mathlight (Microcalc)
+# 🧮 Mathlight (Microcalc) V0.2.1
 
 ![License](https://img.shields.io/badge/license-Custom-red)
 ![Python](https://img.shields.io/badge/Language-Python-blue)
@@ -35,6 +35,24 @@
     resultat = calculer(10, '*', 5)
     print(resultat) # Affiche 50.0
     ```
+##MAJ
+
+1.Maintenent avec math avancé!
+
+ ```python
+    from microcalc import calculer
+
+# Opérations de base
+print(calculer(10, '+', 5))     # 15.0
+print(calculer(10, '/', 0))     # "DivByZero"
+
+# Maths avancées
+print(calculer(9, 'sqrt'))      # 3.0
+print(calculer(4.7, 'floor'))   # 4.0
+
+# Trigonométrie
+print(calculer(0, 'sin'))       # 0.0
+  ```
 
 ## ⚖️ Licence
 
